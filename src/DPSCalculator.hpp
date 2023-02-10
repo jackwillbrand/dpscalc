@@ -1,3 +1,6 @@
+#ifndef DPSCALCULATOR_HPP_
+#define DPSCALCULATOR_HPP_
+
 #include <vector>
 
 #include "structures.hpp"
@@ -15,3 +18,5 @@ class DPSCalculator
         std::vector<attacker> attackers_;
         std::vector<defender> defenders_;
 };
+
+#endif // DPSCALCULATOR_HPP_
