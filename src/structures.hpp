@@ -1,3 +1,6 @@
+#ifndef STRUCTURES_HPP_
+#define STRUCTURES_HPP_
+
 #include <string>
 
 enum attack_style
@@ -130,3 +133,5 @@ struct Result
     int   max_attack_roll_  = 0;
     int   max_defence_roll_ = 0;
 };
+
+#endif /* STRUCTURES_HPP_ */

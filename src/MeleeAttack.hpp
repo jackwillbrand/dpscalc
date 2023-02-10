@@ -1,3 +1,6 @@
+#ifndef MELEE_ATTACK_HPP_
+#define MELEE_ATTACK_HPP_
+
 #include "AttackType.hpp"
 
 class MeleeAttack : public AttackType
@@ -14,3 +17,5 @@ class MeleeAttack : public AttackType
         int sum_attack_bonus(const gear_set& gear_set)        const;
         int sum_strength_bonus(const gear_set& gear_set)      const;
 };
+
+#endif // MELEE_ATTACK_HPP_

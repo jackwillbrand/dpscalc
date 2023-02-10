@@ -44,6 +44,7 @@ int MeleeAttack::sum_attack_bonus(const gear_set& gear_set) const
         case magic:
             throw std::runtime_error("Invalid attack style for melee attack.");
     }
+    return 0;
 }
 
 int MeleeAttack::sum_strength_bonus(const gear_set& gear_set) const

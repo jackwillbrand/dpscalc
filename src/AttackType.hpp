@@ -1,3 +1,6 @@
+#ifndef ATTACKTYPE_HPP_
+#define ATTACKTYPE_HPP_
+
 #include "structures.hpp"
 
 #include <cmath>
@@ -40,3 +43,5 @@ class MagicAttack : public AttackType
         float sum_magic_bonus(const gear_set& gear_set) const;
 };
 */
+
+#endif // ATTACKTYPE_HPP_

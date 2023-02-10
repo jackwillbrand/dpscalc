@@ -4,6 +4,10 @@ project(dpscalc)
 # Specify the source files
 set(SOURCES
     src/dpscalc.cpp
+    src/DPSCalculator.cpp
+    src/MeleeAttack.cpp
+    src/CSVReader.cpp
+    src/AttackType.cpp
 )
 
 # Create an executable
