@@ -8,6 +8,8 @@ set(SOURCES
     src/MeleeAttack.cpp
     src/CSVReader.cpp
     src/AttackType.cpp
+
+    tests/CSVReaderTest.cpp
 )
 
 # Create an executable
