@@ -1,7 +1,39 @@
 #include "DPSCalculator.hpp"
+#include "../tests/CSVReaderTest.hpp"
 #include "CSVReader.hpp"
 
+#include <vector>
+#include <memory>
+
 #include <iostream>
+
+int do_unit_tests()
+{
+
+    // UNIT TESTING AND DEBUGGING HERE
+    // TODO: MOVE TO SEPARATE LOCATION WITH OWN CMAKE FILE
+    std::vector<std::unique_ptr<UnitTest>> unit_tests;
+    unit_tests.push_back(std::make_unique<CSVReaderTest>());
+
+    int fails, passes = 0;
+    std::cout << "\nRUNNING UNIT TESTS...\n";
+    for (const auto& unit_test : unit_tests)
+    {
+        if (!unit_test->condition())
+        {
+            std::cout << "Unit test failed: " << unit_test->get_name() << "\n";
+            fails++;
+            continue;
+        }
+        std::cout << "Unit test passed: " << unit_test->get_name() << "\n";
+        passes++;
+    }
+
+    std::cout << "Unit tests passed: " << passes << "\n";
+    std::cout << "Unit tests failed: " << fails << "\n";
+    std::cout << "UNIT TESTS COMPLETE\n";
+    return 0;
+}
 
 int main()
 {
@@ -11,13 +43,5 @@ int main()
     dps_calculator.calculate_all_dps();
     std::cout << "DPS calculator created!\n";
 
-    CSVReader csv_reader("../data/items.csv");
-    if (csv_reader.read_csv())
-        csv_reader.print_data();
-    
-    CSVReader csv_reader2("../data/monsters.csv");
-    if (csv_reader2.read_csv())
-        csv_reader2.print_data();
-
-    return 0;
+    return do_unit_tests();
 }

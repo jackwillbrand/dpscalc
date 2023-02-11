@@ -18,7 +18,7 @@ bool CSVReader::read_csv()
 
         int col = 0;
         std::string key;
-        std::map<std::string, std::string> row_data;
+        CSVRow row_data;
         while (std::getline(row_stream, cell, ','))
         {
             if (row == 0)
